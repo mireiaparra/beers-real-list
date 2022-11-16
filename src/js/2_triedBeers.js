@@ -13,7 +13,7 @@ function getTried(ev){
         triedBeers.splice(isTriedIndex, 1);
         eachArticle.classList.remove("allBeersList__article--selected");
     }
-    console.log(triedBeers);
+    setLS();
 }
 
 function paintTried(){
