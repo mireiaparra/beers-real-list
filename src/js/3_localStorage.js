@@ -18,6 +18,7 @@ function paintLS(){
 }
     }
     styleWhenLS();
+    askRate();
 }
 
 function styleWhenLS(){
@@ -28,11 +29,9 @@ function styleWhenLS(){
 
     const beerInLS = triedBeers.find((eachBeer) => eachBeer.id === parseInt(eachArticle.id));
    if (beerInLS !== undefined) {
-    eachArticle.classList.add("allBeersList__article--selected");
+    eachArticle.classList.add("allBeersList__article--selectedAll");
    }
 } 
 }
-
-
 
 paintLS();

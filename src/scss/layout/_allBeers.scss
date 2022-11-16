@@ -25,6 +25,10 @@
     &--selected {
       background-color: $colorSelected;
     }
+
+     &--selectedAll {
+      background-color: pink;
+    }
   }
 }
 
@@ -35,4 +39,8 @@
 
 .beers__tagline {
  color: rgb(96, 89, 89);
+}
+
+.hidden {
+  display: none;
 }
