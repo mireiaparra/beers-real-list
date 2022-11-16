@@ -10,7 +10,7 @@ localStorage.setItem("triedBeers", JSON.stringify(triedBeers));
 // }
 
 function paintLS(){
-    if(triedBeersLS !== null || triedBeersLS.length > 0) {
+    if(triedBeersLS !== null && triedBeersLS.length > 0) {
     triedBeers = triedBeersLS;
     triedList.innerHTML = "";
     for (const eachBeerLS of triedBeersLS) {
