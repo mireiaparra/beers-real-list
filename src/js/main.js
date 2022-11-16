@@ -9,6 +9,7 @@ function getDataServer(url) {
             paintData(eachBeer, allList, "allBeersList__article");
         }
         getClick();
+        styleWhenLS();
     })
 }
 
@@ -45,4 +46,16 @@ function paintData(whichData, whichList, whichClass) {
     eachLi.appendChild(article);
     whichList.appendChild(eachLi);
 }
+
+// let eachArticle =  getEachArticle();
+
+// function getEachArticle(){
+//     const allTriedLi = triedList.childNodes;
+//     for (const eachLi of allTriedLi) {
+//     const eachArticle = eachLi.firstChild;
+//     return eachArticle;
+// }
+// }
+
+
 getDataServer("https://api.punkapi.com/v2/beers");
