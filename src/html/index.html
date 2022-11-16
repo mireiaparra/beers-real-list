@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="./assets/css/main.css"rel="stylesheet">
+    <title>Find the best beer</title>
+</head>
+<body>
+    <header>
+        <form>
+            <label for="search">Search your favourite beer</label>
+            <input type="text" name="search" class="js-searchInput">
+            <button class="js-searchBtn">Search</button>
+        </form>
+    </header>
+    <main class="container">
+        <section class="js-triedBeers">
+            <h2>Tried beers</h2>
+            <ul class="js-triedBeersList"></ul>
+        </section>
+        <section class="js-allBeers">
+            <h2>All beers</h2>
+            <ul class="js-allBeersList allBeersList"></ul>
+        </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

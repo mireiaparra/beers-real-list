@@ -1,0 +1,38 @@
+.allBeersList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+  font-family: $fontMain;
+
+  &__article {
+    width: 170px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: $colorArticle;
+    border: 2px solid $colorArticleBorder;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+    &--selected {
+      background-color: $colorSelected;
+    }
+  }
+}
+
+
+.beers__name {
+  font-size: 20px;
+}
+
+.beers__tagline {
+ color: rgb(96, 89, 89);
+}
