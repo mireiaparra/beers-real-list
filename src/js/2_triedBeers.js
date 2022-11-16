@@ -1,23 +1,30 @@
 "use strict";
-// function paintTried(ev){
-//     const eachArticle = ev.currentTarget.firstChild;
-//     eachArticle.classList.toggle("allBeersList__article--selected");
-// }
 
 function getTried(ev){
     const eachArticle = ev.currentTarget.firstChild;
-    eachArticle.classList.toggle("allBeersList__article--selected");
+    eachArticle.classList.add("allBeersList__article--selected");
 
-    if (eachArticle.classList.contains("allBeersList__article--selected")) {
     const isTried = allBeers.find(eachObject => eachObject.id === parseInt(eachArticle.id));
+    const isTriedIndex = triedBeers.findIndex(eachObject => eachObject.id === parseInt(eachArticle.id));
 
-    paintData(isTried, triedList,"allBeersList__article--selected");
-
+    if(isTriedIndex === -1) {
+        triedBeers.push(isTried);
+    } else {
+        triedBeers.splice(isTriedIndex, 1);
+        eachArticle.classList.remove("allBeersList__article--selected");
     }
+    console.log(triedBeers);
 }
+
+function paintTried(){
+    triedList.innerHTML = "";
+    for (const eachTriedBeer of triedBeers) {
+    paintData(eachTriedBeer, triedList,"allBeersList__article--selected");
+ }}
 
 function handleClickTried(ev){
     getTried(ev);
+    paintTried();
 }
 
 function getClick(){
